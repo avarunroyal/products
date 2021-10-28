@@ -1,0 +1,18 @@
+#==== connect to mysql ======#
+spring:
+  application:
+    name: products
+  jpa:
+    hibernate.ddl-auto: update
+  datasource:
+     url: jdbc:mysql://${MYSQL_HOSTNAME:localhost}:3306/product
+     username: root
+     password: D@tabase123
+     driver-class-name: com.mysql.cj.jdbc.Driver
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      base-path: /manage
