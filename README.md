@@ -7,7 +7,7 @@ https://hub.docker.com/_/mysql
 #
 docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=D@tabase123 -e MYSQL_DATABASE=product -e MYSQL_USER=varun -e MYSQL_PASSWORD=D@tabase123 --name=mysql mysql:8.0.27
 
-# Create docker image of products microservice nd push to docker repository
+# Create docker image of products microservice and push to docker repository
 mvn clean install
 docker push devopsvarun/products:0.0.1-SNAPSHOT
 
