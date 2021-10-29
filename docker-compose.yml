@@ -1,0 +1,30 @@
+version: '3.7'
+services:
+  product:
+    image: devopsvarun/products:0.0.1-SNAPSHOT
+    labels:
+      kompose.service.type: LoadBalancer
+    ports:
+      - "8080:8080"
+    restart: always
+    depends_on: # Start the depends_on first
+      - mysql 
+    environment:
+      MYSQL_HOSTNAME: mysql
+      SPRING_PROFILES_ACTIVE: dev
+  mysql:
+    image: mysql:8.0.27
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: D@tabase123
+      MYSQL_USER: varun
+      MYSQL_PASSWORD: D@tabase123
+      MYSQL_DATABASE: product
+    volumes:
+      - mysql-database-data-volume:/var/lib/mysql
+
+# Volumes
+volumes:
+  mysql-database-data-volume:
