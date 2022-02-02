@@ -3,7 +3,7 @@ Simple products microservice which does CRUD operations connecting to MYSQL dock
 
 # RUN mysql as docker container
 https://hub.docker.com/_/mysql
-<br />$ docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=D@tabase123 -e MYSQL_DATABASE=product -e MYSQL_USER=varun -e MYSQL_PASSWORD=D@tabase123 --name=mysql mysql:8.0.27
+<br />$ docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=D@tabase123 -e MYSQL_DATABASE=product -e MYSQL_USER=varun -e MYSQL_PASSWORD=D@tabase123 --name=mysql mysql:8.0.28
 
 # Create docker image of products microservice and push to docker repository
 $ mvn clean install
