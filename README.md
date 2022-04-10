@@ -25,6 +25,6 @@ Create gcloud cluster at https://console.cloud.google.com/ - Kubernets Engine ->
 <br /> Deploy using generated files in GCP
   
 <br />$ kubectl apply -f mysql-database-data-volume-persistentvolumeclaim.yaml,mysql-deployment.yaml,mysql-service.yaml
-<br />$ kubectl apply -f product-deployment.yaml,product-service.yaml
+<br />$ kubectl apply -f product-deployment.yaml,product-tcp-service.yaml
 
 
